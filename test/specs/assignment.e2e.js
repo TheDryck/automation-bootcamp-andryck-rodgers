@@ -5,7 +5,7 @@ const Checkout = require('../pageobjects/checkout.page');
 
 
 describe('Luma ECommerce workflow', () => {
-    it.skip('should sign up with valid inputs', async () => {
+    it('should sign up with valid inputs', async () => {
         await SignupPage.open();
 
         await SignupPage.signup('dryck', 'rodg', 'rodgdry@gmail.com', 'pass#123');
@@ -13,7 +13,7 @@ describe('Luma ECommerce workflow', () => {
         //await expect('.logged-in').toHaveTextContaining('Welcome, dryck rodg!');
     })
 
-    it.skip('Should add an item to the cart', async () => {
+    it('Should add an item to the cart', async () => {
         await browser.url('https://magento.softwaretestingboard.com/#');
 
         let product = await $('a[title="Fusion Backpack"]');
@@ -48,7 +48,7 @@ describe('Luma ECommerce workflow', () => {
 
     })
 
-    it.skip('Verify purchase in order history', async ()=>{
+    it('Verify purchase in order history', async ()=>{
         await browser.url('https://magento.softwaretestingboard.com/sales/order/history/');
         
     })
